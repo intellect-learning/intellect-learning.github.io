@@ -156,7 +156,8 @@
                 <div class="section-container-spacer">
                     <h2 class="text-center">ЗАДАТЬ ВОПРОС</h2>
                 </div>
-                <form action="https://formspree.io/intellect.learning.2019@gmail.com" method="POST" target="_blank"/>
+                <!-- </form> -->
+                <form action="https://formspree.io/intellect.learning.2019@gmail.com" method="POST" target="_blank" name="msgForm">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -182,12 +183,19 @@
 
                     <button type="submit" class="btn btn-primary">Отправить</button>
                     <a href="" class="btn btn-default">Сбросить</a>
-                <!-- </form> -->
+                </form>
             </div>
         </div>
     </div>
 </div>
-
+<script>
+function submitForm() {
+   var frm = document.getElementsByName('msgForm')[0];
+   frm.submit(); // Submit the form
+   frm.reset();  // Reset all form data
+   return false; // Prevent page refresh
+}
+</script>
 <footer style="background-color: #000000">
     <div class="container">
         <div class="row">
