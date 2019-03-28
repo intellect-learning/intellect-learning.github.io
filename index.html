@@ -46,10 +46,20 @@
         <div class="row">
             <!-- <div class="col-xs-12 col-md-12 section-container-spacer"> -->
                 <div class="col-auto section-container-spacer">
-                <h2 class="text-center" style="font-size: 4rem;">Программирование на Python</h2>
+                <h2 class="text-center" style="font-size: 3.6rem;">Программирование на Python</h2>
                 <p style="margin-left: 20px;">Язык программирования Python активно используется во всем мире. Разрабатывать на нем легко и быстро, что делает его популярным языком для многих программистов крупных международных компаний, таких как Яндекс и Google.</p>
                 <p style="margin-left: 20px;">Python применяется в веб-программировании, сферах компьютерной безопасности, при создании графики, для машинного обучения и во многих других областях.</p>
                 <p style="margin-left: 20px;">Python признан языком программирования 2018 года.</p>
+                <p style="margin-left: 20px;">Комплексное обучение: теория + практика.</p>
+                <ul style="margin-left: 20px;">
+                    <li>Вы изучите основы программирования</li>
+                    <li>Научитесь работать с информацией и ее обработкой</li>
+                    <li>Получите реальный практический опыт написания программ</li>
+                    <li>Создадите собственный проект</li>
+                </ul>
+                <p style="margin-left: 20px;">Профессия программиста — это высокие зарплаты, множество специализаций и острый дефицит специалистов. Пиши код, создавай проекты и готовься к вузу или смене текущей профессии!</p>
+                <p style="margin-left: 20px;">Курс состоит из 12 занятий. Стоимость 1 занятия 1000 рублей. При оплате всего курса - <span style="color: red">скидка 2000 рублей.</span></p>
+                <p style="margin-left: 20px;">Занятия проводятся раз в неделю, по субботам, в центре г. Сочи.</p>
 
             </div>
         </div>
@@ -157,7 +167,7 @@
                     <h2 class="text-center">ЗАДАТЬ ВОПРОС</h2>
                 </div>
                 <!-- </form> -->
-                <form action="https://formspree.io/intellect.learning.2019@gmail.com" method="POST" name="msgForm" id="msgForm" target="_blank">
+                <form action="https://formspree.io/intellect.learning.2019@gmail.com" method="POST" name="msgForm" id="msgForm" target="_blank" onsubmit="return submitForm()">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -181,64 +191,30 @@
                         <textarea class="form-control" rows="3" placeholder="Введите Ваше сообщение" name="message" required></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" onsubmit="return submitForm()">Отправить</button>
+                    <button type="submit" class="btn btn-primary" >Отправить</button>
                     <a href="" class="btn btn-default">Сбросить</a>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<!-- <script type="text/javascript">
-$(document).ready(function() {
-  $('#msgForm').submit(function(e) {
-    var name    = document.getElementByName('name')
-    var phone    = document.getElementByName('phone')
-    var email   = document.getElementByName('email')
-    var message = document.getElementByName('message')
-
-    if (!name.value or !phone.value or !email.value or !message.value) {
-      alertify.error("Проверьте введенные данные");
-      return false;
-    } else {
-      $.ajax({
-        method: 'POST',
-        url: '//formspree.io/intellect.learning.2019@gmail.com',
-        data: $('#msgForm').serialize(),
-        datatype: 'json'
-      });
-      e.preventDefault();
-      $(this).get(0).reset();
-      alertify.success("Сообщение отправлено");
-    }
-  });
-});
-</script> -->
 <script>
 function submitForm() {
+  var frm = document.forms["msgForm"];
   var name = document.forms["msgForm"]["name"].value;
   var phone = document.forms["msgForm"]["phone"].value;
   var email = document.forms["msgForm"]["email"].value;
-  var message = ocument.forms["msgForm"]["message"].value;
+  var message = document.forms["msgForm"]["message"].value;
   if (name == "" or phone == "" or email == "" or message == "") {
-    alert("Name must be filled out");
+    alert("Заполните необходимые поля");
     return false;
-  }
-  else {
-    var frm = document.getElementsByName('msgForm')[0];
+  } else {
    frm.submit(); // Submit the form
    frm.reset(); // Reset all form data
    return false; // Prevent page refresh
   }
 }
 </script>
-<!-- <script>
-function submitForm() {
-   var frm = document.getElementsByName('msgForm')[0];
-   frm.submit(); // Submit the form
-   frm.reset(); // Reset all form data
-   return false; // Prevent page refresh
-}
-</script> -->
 <footer style="background-color: #000000">
     <div class="container">
         <div class="row">
